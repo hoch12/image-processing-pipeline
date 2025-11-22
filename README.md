@@ -15,3 +15,14 @@ image-processing-pipeline/
 ├── input/ ← vstupní obrázky    
 ├── output/ ← výstupy zpracování    
 └── README.md 
+
+## Spuštění projektu
+1. Stáhnout projekt z GitHub    
+
+2. Nainstaloat potřebné balíčky
+
+3.`python -m src.main --input input --output output --workers 4 --resize 800`    
+**input** : Složka odkud se berou obrázky (vstup)    
+**output** : Složka kam se nahrává csv a procesované obrázky (výstup)    
+**workers** : Počet pracujících vláken   
+**resize** : Nová velikost px původních obrázků
