@@ -21,7 +21,7 @@ image-processing-pipeline/
 
 2. Nainstaloat potřebné balíčky
 
-3.`python -m src.main --input input --output output --workers 4 --resize 800`    
+3.  `python -m src.main --input input --output output --workers 4 --resize 800`    
 **input** : Složka odkud se berou obrázky (vstup)    
 **output** : Složka kam se nahrává csv a procesované obrázky (výstup)    
 **workers** : Počet pracujících vláken   
