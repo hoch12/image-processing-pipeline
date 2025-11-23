@@ -26,7 +26,9 @@ The main goal of the project is to demonstrate understanding of:
 ✔ Structured OOP architecture (`loader`, `validator`, `processor`, `pipeline`)  
 ✔ Full set of unit tests    
 
-## Project Structure   
+## Project Structure  
+
+```
 image-processing-pipeline/  
 │   
 ├── docs/                    <- Documentation    
@@ -48,6 +50,7 @@ image-processing-pipeline/
 ├── output/                  <- Processed images + CSV reports   
 │   
 └── README.md   
+```
 
 ## How the Pipeline Works  
 1. ImageLoader     

@@ -52,13 +52,14 @@ The primary goal of this project is to demonstrate:
 ```
 image-processing-pipeline/
 │
-├── docs/                ← Project documentation (this file)
+├── docs/                ← Project documentation
 ├── src/                 ← Source code modules
 │   ├── loader.py        ← ImageLoader class
 │   ├── validator.py     ← ImageValidator class
 │   ├── processor.py     ← ImageProcessor class and processing steps
 │   ├── exporter.py      ← CSVExporter class
 │   └── pipeline.py      ← ImagePipeline orchestration
+│   └── main.py          
 ├── tests/               ← Unit tests for all modules
 │   ├── test_loader.py
 │   ├── test_validator.py
@@ -83,7 +84,7 @@ image-processing-pipeline/
 * **Exporter:** Writes processing results into a CSV file.
 * **Pipeline:** Coordinates loader, validator, processor, and exporter.
 
-### 5.2 Component Interactions (UML-like)
+### 5.2 Component Interactions
 
 ```
 [User Input Folder] --> ImageLoader --> ImageValidator --> ImageProcessor --> CSVExporter --> [Output Folder + CSV]
