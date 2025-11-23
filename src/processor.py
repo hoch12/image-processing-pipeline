@@ -26,7 +26,7 @@ class ImageProcessor:
         self.output_folder.mkdir(parents=True, exist_ok=True)  # ensure folder exists
         self.max_size = max_size
 
-    def add_step(self, func: Callable[[Path], Any]) -> None:
+    def add_step(self, func: Callable[[Path], Any]):
         """
         Adds a processing step to the pipeline.
 
