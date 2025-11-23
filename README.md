@@ -1,7 +1,9 @@
-# Parallel Image Processing Pipeline 
-Author: Dominik Hoch    
-School: SPŠE Ječná  
-Year: 2025  
+# Parallel Image Processing Pipeline    
+**Author:** Dominik Hoch        
+**School:** SPŠE Ječná      
+**Mail:** [domik.hoch@gmail.com](mailto:domik.hoch@gmail.com)    
+**LinkedIn:** www.linkedin.com/in/dominik-hoch-144143343    
+**Year:** 2025  
 This project is a school application demonstrating a fully implemented parallel image-processing pipeline.  
 It loads images from the `input/` folder, validates them, processes them using a configurable pipeline with     
 optional resizing, and exports the final results into a CSV report. 
