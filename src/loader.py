@@ -19,6 +19,7 @@ class ImageLoader:
         """
         self.folder_path = Path(folder_path)
 
+
     def get_image_paths(self) -> List[Path]:
         """
         Retrieve a sorted list of paths to all image files in the folder matching supported extensions.
