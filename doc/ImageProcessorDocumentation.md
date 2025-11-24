@@ -154,15 +154,15 @@ Unit tests exist for all major modules:
 
 | Module       | Test Class      | Checks                                                   |
 | ------------ | --------------- | -------------------------------------------------------- |
-| loader.py    | `TestLoader`    | Ensures only image files are loaded                      |
-| validator.py | `TestValidator` | Checks valid and invalid images                          |
-| processor.py | `TestProcessor` | Ensures images are resized and saved (serial & parallel) |
-| exporter.py  | `TestExporter`  | Ensures CSV is written with correct content              |
+| `loader.py`    | `test_loader.py`    | Ensures only image files are loaded                      |
+| `validator.py` | `test_validator.py` | Checks valid and invalid images                          |
+| `processor.py` | `test_processor.py` | Ensures images are resized and saved (serial & parallel) |
+| `exporter.py`  | `test_exporter.py`  | Ensures CSV is written with correct content              |
 
 **Run all tests:**
 
 ```bash
-python -m unittest discover -s tests
+python -m unittest discover -s test
 ```
 
 ---
