@@ -128,7 +128,7 @@ def make_resize_and_save_step(output_folder: str = "output", max_size: int = 102
                     else:
                         new_h = max_size
                         new_w = int(w * (max_size / h))
-                    img = img.resize((new_w, new_h), Image.LANCZOS)
+                    img = img.resize((new_w, new_h), Image.LANCZOS) # using LANCZOS for high-quality image resampling
                 # Save resized image to output folder
                 out_path = out_folder / f"{path.stem}_processed.jpg"
                 img.save(out_path, format="JPEG", quality=85)

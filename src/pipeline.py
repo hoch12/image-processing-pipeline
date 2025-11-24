@@ -72,7 +72,11 @@ class ImagePipeline:
             processed = self.processor.run_parallel(to_process, max_workers=self.max_workers)
             for p in processed:
                 src = p.get("source")
-                vd = next((x for x in validated if str(x["path"]) == str(src)), {})
+                vd = {}
+                for x in validated:
+                    if str(x["path"]) == str(src):
+                        vd = x
+                        break
                 merged = {}
                 merged.update(vd)
                 merged.update(p)
