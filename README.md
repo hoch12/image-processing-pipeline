@@ -89,22 +89,22 @@ Main dependencies: `Pillow` and standard Python libraries.
 ## Running the Pipeline
 
 ```bash
-python -m src.main --input input --output output --workers 4 --resize 800
+python -m src.main --input input --output output --workers 4 --scale 1
 ```
 
 **Arguments:**
 
 | Argument    | Description                                |
-| ----------- | ------------------------------------------ |
+|-------------|--------------------------------------------|
 | `--input`   | Folder containing input images             |
 | `--output`  | Folder for processed images and CSV report |
 | `--workers` | Number of threads for parallel processing  |
-| `--resize`  | Maximum output size in pixels              |
+| `--scale`   | Resize scale in percentage. (0.5 -> 50%)   |
 
 **Example:**
 
 ```bash
-python -m src.main --input input_pics --output output_pics --workers 6 --resize 1024
+python -m src.main --input input_pics --output output_pics --workers 6 --scale 0.5
 ```
 
 ---

@@ -28,7 +28,7 @@ The primary goal of this project is to demonstrate:
 * Provide an input folder containing images (`input/`)
 * Configure output folder for processed images and CSV report (`output/`)
 * Specify maximum number of concurrent threads
-* Resize images to a maximum width/height in pixels
+* Resize images to a desired percentage of the original size
 
 **Application will:**
 
@@ -80,7 +80,7 @@ image-processing-pipeline/
 
 * **Loader:** Reads all image file paths from the input folder.
 * **Validator:** Checks each image for validity and minimum size.
-* **Processor:** Applies image processing steps (resize, save). Supports serial or parallel execution.
+* **Processor:** Applies image processing steps (scale, save). Supports serial or parallel execution.
 * **Exporter:** Writes processing results into a CSV file.
 * **Pipeline:** Coordinates loader, validator, processor, and exporter.
 
@@ -123,7 +123,7 @@ pip install -r requirements.txt
 ## 7. Running the Application
 
 ```bash
-python -m src.main --input input --output output --workers 4 --resize 1024
+python -m src.main --input input --output output --workers 4 --scale 1
 ```
 
 **Arguments:**
@@ -131,7 +131,7 @@ python -m src.main --input input --output output --workers 4 --resize 1024
 * `--input`: Input folder with images
 * `--output`: Output folder for processed images and CSV report
 * `--workers`: Number of concurrent threads
-* `--resize`: Maximum width/height in pixels
+* `--scale`: Resize scale in percentage(0.5 = 50%).. defaults to 1.0 (no resize)
 
 **Output:**
 
@@ -169,8 +169,8 @@ python -m unittest discover -s test
 
 ## 10. Configuration
 
-* All configurable options (input/output folders, threads, resize size) are **command-line arguments**.
-* Defaults: `input/`, `output/`, 4 threads, resize max 1024 px.
+* All configurable options (input/output folders, threads, scale percentage) are **command-line arguments**.
+* Defaults: `input/`, `output/`, 4 threads, scale 1.
 
 ---
 

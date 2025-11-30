@@ -23,19 +23,25 @@ class CSVExporter:
         self.output_folder.mkdir(parents=True, exist_ok=True)
         self.path = self.output_folder / filename
 
-    def write(self, rows: Iterable[Dict[str, Any]], fieldnames=None):
+    def write(self, rows: Iterable[Dict[str, Any]], fieldnames=None) -> str:
         """
-        Write a list of dictionaries to a CSV file. Automatically determines fieldnames
-        if not provided, preserving the order of first appearance.
+        Write rows to CSV. Determines fieldnames automatically if not provided.
+
+        Each row should contain keys like:
+            - 'source': original image path
+            - 'processed_path': path to processed image
+            - 'processed_width': width after resize
+            - 'processed_height': height after resize
+            - 'resize_percentage': percentage used for resizing (if applicable)
 
         Args:
-            rows (Iterable[Dict[str, Any]]): Iterable of dictionaries representing CSV rows.
-            fieldnames (List[str], optional): List of column names for the CSV. If None,
-                                              the keys from the rows are used in order.
+            rows (Iterable[Dict[str, Any]]): Iterable of dictionaries representing rows.
+            fieldnames (List[str], optional): Column names. If None, inferred from keys.
 
         Returns:
-            str: The full path to the written CSV file as a string.
+            str: Full path to the written CSV file. Returns path even if rows are empty.
         """
+
         rows = list(rows)
         if not rows:
             return str(self.path)
