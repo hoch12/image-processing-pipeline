@@ -75,9 +75,15 @@ class ImageProcessor:
 
         out = []
         with ThreadPoolExecutor(max_workers=max_workers) as ex:
-            futures = {ex.submit(self._run_steps, p): p for p in image_paths}
+            futures = {}
+            for p in image_paths:
+                fut = ex.submit(self._run_steps, p)
+                futures[fut] = p  # store the original image path 'p' associated with its running Future 'fut'
+
             for fut in as_completed(futures):
-                out.append(fut.result())
+                result = fut.result()
+                out.append(result)
+
         return out
 
 
@@ -111,7 +117,7 @@ def make_resize_and_save_step(output_folder: str = "output", scale: float = 1.0)
                 w, h = img.size
                 new_w = max(1, int(w * scale))
                 new_h = max(1, int(h * scale))
-                img = img.resize((new_w, new_h), Image.LANCZOS)
+                img = img.resize((new_w, new_h), Image.LANCZOS) # using LANCZOS for high-quality image resampling
                 out_path = out_folder / f"{path.stem}_processed.jpg"
                 img.save(out_path, format="JPEG", quality=85)
                 return {
