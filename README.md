@@ -139,6 +139,19 @@ After running the pipeline, the `output/` folder contains:
 
 ---
 
+## Testing data
+
+In a folder `testing-data/` you will find data to test the pipeline with.
+
+
+| File            | Description                                 |
+|-----------------|---------------------------------------------|
+| `bad_photo.jpg` | Image with an error                         |
+| `Lion.jpg`      | Valid image that has bigger height          |
+| `text.txt`      | Text file to confirm that is being ignored  |
+| `Tigre.jpg`     | Valid image that has bigger width           |
+
+
 ## Notes
 
 * Proper OOP structure is maintained
