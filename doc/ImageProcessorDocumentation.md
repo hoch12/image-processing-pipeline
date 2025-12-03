@@ -223,7 +223,7 @@ This project is licensed under the **MIT License**. You can freely use, modify, 
 
 ---
 
-## Testing data
+## 16. Testing data
 
 In a folder `testing-data/` you will find data to test the pipeline with.
 
@@ -237,7 +237,7 @@ In a folder `testing-data/` you will find data to test the pipeline with.
 
 ---
 
-## 16. References
+## 17. References
 
 * Python 3.11 Documentation
 * Pillow Documentation: [https://pillow.readthedocs.io/](https://pillow.readthedocs.io/)
