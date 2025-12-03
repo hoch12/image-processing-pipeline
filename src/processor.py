@@ -1,6 +1,7 @@
 from pathlib import Path
 from typing import Callable, List, Any
 from PIL import Image
+from tqdm import tqdm
 
 class ImageProcessor:
     """
@@ -80,7 +81,7 @@ class ImageProcessor:
                 fut = ex.submit(self._run_steps, p)
                 futures[fut] = p  # store the original image path 'p' associated with its running Future 'fut'
 
-            for fut in as_completed(futures):
+            for fut in tqdm(as_completed(futures), total=len(futures), desc="Processing (Parallel)", unit="img"):
                 result = fut.result()
                 out.append(result)
 

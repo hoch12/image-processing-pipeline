@@ -41,7 +41,7 @@ The primary goal of this project is to demonstrate:
 ## 3. Non-Functional Requirements
 
 * Platform independent (tested on macOS, Python 3.11)
-* Uses Python standard libraries and `Pillow` for image processing
+* Uses Python standard libraries, `Pillow` for image processing and `TQDM` for progress bar`
 * Thread-based parallelism using `concurrent.futures.ThreadPoolExecutor`
 * Output is deterministic (CSV and image files are consistently named)
 
@@ -183,6 +183,7 @@ python -m unittest discover -s test
 ## 11. Third-Party Libraries
 
 * `Pillow` – image reading and manipulation
+* `TQDM` - progress bar
 * `pytest` – optional, for additional testing
 * Standard libraries: `pathlib`, `csv`, `typing`, `concurrent.futures`
 
@@ -242,5 +243,6 @@ In a folder `testing-data/` you will find data to test the pipeline with.
 
 * Python 3.11 Documentation
 * Pillow Documentation: [https://pillow.readthedocs.io/](https://pillow.readthedocs.io/)
+* TQDM Documentation: [https://tqdm.github.io/](https://tqdm.github.io/)
 * Python `csv` module: [https://docs.python.org/3/library/csv.html](https://docs.python.org/3/library/csv.html)
 * Concurrent Futures: [https://docs.python.org/3/library/concurrent.futures.html](https://docs.python.org/3/library/concurrent.futures.html)

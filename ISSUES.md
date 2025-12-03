@@ -22,7 +22,7 @@ These issues have been identified during testing and code review.
 
 Ideas for future improvements and user experience enhancements.
 
-| ID | Type | Description | Priority |
-| :--- | :--- | :--- | :--- |
-| **FEAT-001** | **UX** | **CLI Progress Bar:** Implement a visual progress bar (e.g., using `tqdm`) to indicate the percentage of completion during parallel processing. | Low |
-| **FEAT-002** | **Feature** | **Format Conversion:** Add a `--format` argument to allow converting images (e.g., JPEG to PNG, PNG to WebP) during the processing step. | Medium |
+| ID | Type | Description                                                                                                                                     | Priority | Status    |
+| :--- | :--- |:------------------------------------------------------------------------------------------------------------------------------------------------| :--- |:----------|
+| **FEAT-001** | **UX** | **CLI Progress Bar:** Implement a visual progress bar (e.g., using `TQDM`) to indicate the percentage of completion during parallel processing. | Low | **DONE**  |
+| **FEAT-002** | **Feature** | **Format Conversion:** Add a `--format` argument to allow converting images (e.g., JPEG to PNG, PNG to WebP) during the processing step.        | Medium | **TO DO** |
