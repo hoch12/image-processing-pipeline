@@ -74,6 +74,7 @@ image-processing-pipeline/
 │   ├── text.txt
 │   └── Tigre.jpg
 ├── requirements.txt     ← Python dependencies
+├── ISSUES.md            ← Bug list and known issues
 └── README.md            ← Usage instructions
 ```
 

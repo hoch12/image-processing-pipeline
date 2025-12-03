@@ -45,6 +45,7 @@ image-processing-pipeline/
 ├── input/               <- Input images
 ├── output/              <- Processed images + CSV reports
 ├── testing-data/        <- Testing data to test the pipeline with
+├── ISSUES.md            <- Bug list and known issues
 └── README.md
 ```
 
