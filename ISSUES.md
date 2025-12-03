@@ -12,9 +12,9 @@ These issues have been identified during testing and code review.
 
 | ID          | Severity | Description | Status    |
 |:------------| :--- | :--- |:----------|
-| **BUG-001** | **High** | **Filename Collisions:** The pipeline saves files using only the filename stem. If input folders contain duplicate filenames in different subdirectories (e.g., `A/img.jpg` and `B/img.jpg`), the output file is overwritten by the last thread, causing data loss. | **To Do** |
-| **BUG-002** | **Medium** | **Lack of Input Validation:** The application crashes or behaves unexpectedly if invalid arguments are provided (e.g., negative integers for `--workers`). | **To Do** |
-| **BUG-003** | **Low** | **Silent Failure on Invalid Path:** If the provided `--input` path does not exist, the program runs successfully with 0 files instead of raising an error or warning the user. | **To Do** |
+| **BUG-001** | **High** | **Filename Collisions:** The pipeline saves files using only the filename stem. If input folders contain duplicate filenames in different subdirectories (e.g., `A/img.jpg` and `B/img.jpg`), the output file is overwritten by the last thread, causing data loss. | **TO DO** |
+| **BUG-002** | **Medium** | **Lack of Input Validation:** The application crashes or behaves unexpectedly if invalid arguments are provided (e.g., negative integers for `--workers`). | **FIXED** |
+| **BUG-003** | **Low** | **Silent Failure on Invalid Path:** If the provided `--input` path does not exist, the program runs successfully with 0 files instead of raising an error or warning the user. | **FIXED** |
 
 ---
 
