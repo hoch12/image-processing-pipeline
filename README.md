@@ -44,6 +44,7 @@ image-processing-pipeline/
 │   ├── test_exporter.py
 ├── input/               <- Input images
 ├── output/              <- Processed images + CSV reports
+├── testing-data/        <- Testing data to test the pipeline with
 └── README.md
 ```
 
@@ -151,6 +152,7 @@ In a folder `testing-data/` you will find data to test the pipeline with.
 | `text.txt`      | Text file to confirm that is being ignored  |
 | `Tigre.jpg`     | Valid image that has bigger width           |
 
+---
 
 ## Notes
 

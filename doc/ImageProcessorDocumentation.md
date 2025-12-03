@@ -68,6 +68,11 @@ image-processing-pipeline/
 ├── input/               ← Input images folder
 ├── output/              ← Output images and CSV reports
 ├── .venv/               ← Python virtual environment
+├── testing-data/        ← Testing data to test the pipeline with
+│   ├── bad_photo.jpg
+│   ├── Lion.jpg
+│   ├── text.txt
+│   └── Tigre.jpg
 ├── requirements.txt     ← Python dependencies
 └── README.md            ← Usage instructions
 ```
@@ -215,6 +220,20 @@ This project is licensed under the **MIT License**. You can freely use, modify, 
 * Add database support for storing processing results.
 * Support image filters or transformations beyond resizing.
 * Add GUI for easier usage.
+
+---
+
+## Testing data
+
+In a folder `testing-data/` you will find data to test the pipeline with.
+
+
+| File            | Description                                 |
+|-----------------|---------------------------------------------|
+| `bad_photo.jpg` | Image with an error                         |
+| `Lion.jpg`      | Valid image that has bigger height          |
+| `text.txt`      | Text file to confirm that is being ignored  |
+| `Tigre.jpg`     | Valid image that has bigger width           |
 
 ---
 
