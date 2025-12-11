@@ -29,11 +29,15 @@ class ImageLoader:
         Returns:
             List[Path]: A sorted list of Path objects pointing to image files.
         """
-        exts = ("*.png", "*.jpg", "*.jpeg", "*.bmp", "*.gif", "*.tiff")
+        # Define allowed extensions (lowercase for comparison)
+        valid_exts = {".png", ".jpg", ".jpeg", ".bmp", ".gif", ".tiff"}
         paths = []
-        for ext in exts:
-            # Use glob to find all files matching the extension pattern in folder_path
-            paths.extend(self.folder_path.glob(ext))
-        # Remove duplicates and sort the list
-        paths = sorted(set(paths))
-        return paths
+
+        # Check if the input directory exists before scanning
+        if self.folder_path.exists():
+            for item in self.folder_path.glob("*"):
+                # item.suffix.lower() refactors .JPG to .jpg and then compares them
+                if item.is_file() and item.suffix.lower() in valid_exts:
+                    paths.append(item)
+
+        return sorted(paths)
